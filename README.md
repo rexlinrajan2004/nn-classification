@@ -34,7 +34,7 @@ Train the data and then predict using Tensorflow
 Name: Rexlin R
 Refno: 212222220034
 
-```import pandas as pd
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import load_model
@@ -105,7 +105,7 @@ cust_1 = cust_1.drop('Var_1',axis=1)
 
 cust_1.dtypes
 ```
-
+```
 # Calculate the correlation matrix
 corr = cust_1.corr()
 

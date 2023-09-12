@@ -53,7 +53,7 @@ from sklearn.metrics import classification_report,confusion_matrix
 import numpy as np
 import matplotlib.pylab as plt
 ```
-
+```
 df = pd.read_csv('/content/customers (1).csv')
 df.head()
 df.columns
@@ -107,7 +107,7 @@ cust_1 = cust_1.drop('Var_1',axis=1)
 
 cust_1.dtypes
      
-
+```
 # Calculate the correlation matrix
 corr = cust_1.corr()
 
@@ -195,7 +195,6 @@ with open('customer_data.pickle', 'rb') as fh:
 x_single_prediction = np.argmax(ai_brain.predict(X_test_scaled[1:2,:]), axis=1)
 print(x_single_prediction)
 print(le.inverse_transform(x_single_prediction))
-```
 
 ## Dataset Information
 

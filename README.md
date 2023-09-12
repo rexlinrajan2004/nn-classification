@@ -31,8 +31,7 @@ You are required to help the manager to predict the right group of the new custo
 Name: Rexlin R
 Refno: 212222220034
 
-'''
-import pandas as pd
+```import pandas as pd
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import load_model
@@ -50,7 +49,7 @@ from sklearn.preprocessing import OrdinalEncoder
 from sklearn.metrics import classification_report,confusion_matrix
 import numpy as np
 import matplotlib.pylab as plt
-'''
+```
 
 df = pd.read_csv('/content/customers (1).csv')
 df.head()

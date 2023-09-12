@@ -19,15 +19,18 @@ You are required to help the manager to predict the right group of the new custo
 
 ## DESIGN STEPS
 
-### STEP 1:Load the csv file and then use the preprocessing steps to clean the data
+### STEP 1:
+Load the csv file and then use the preprocessing steps to clean the data
 
-### STEP 2:Split the data to training and testing
+### STEP 2:
+Split the data to training and testing
 
-### STEP 3:Train the data and then predict using Tensorflow
+### STEP 3:
+Train the data and then predict using Tensorflow
 
 
 ## PROGRAM
-
+```
 Name: Rexlin R
 Refno: 212222220034
 
@@ -192,6 +195,7 @@ with open('customer_data.pickle', 'rb') as fh:
 x_single_prediction = np.argmax(ai_brain.predict(X_test_scaled[1:2,:]), axis=1)
 print(x_single_prediction)
 print(le.inverse_transform(x_single_prediction))
+```
 
 ## Dataset Information
 

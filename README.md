@@ -30,7 +30,7 @@ Train the data and then predict using Tensorflow
 
 
 ## PROGRAM
-```
+
 Name: Rexlin R
 Refno: 212222220034
 
@@ -104,8 +104,7 @@ cust_1 = cust_1.drop('Var_1',axis=1)
      
 
 cust_1.dtypes
-```
-```
+
 # Calculate the correlation matrix
 corr = cust_1.corr()
 
@@ -141,13 +140,12 @@ scaler_age = MinMaxScaler()
 scaler_age.fit(X_train[:,2].reshape(-1,1))
 X_train_scaled = np.copy(X_train)
 X_test_scaled = np.copy(X_test)
-```
-```
+
+
 # To scale the Age column
 X_train_scaled[:,2] = scaler_age.transform(X_train[:,2].reshape(-1,1)).reshape(-1)
 X_test_scaled[:,2] = scaler_age.transform(X_test[:,2].reshape(-1,1)).reshape(-1)
-```
-```
+
 # Creating the model
 ai_brain=Sequential([
     Dense(10,input_shape=(8,)),
@@ -176,23 +174,23 @@ y_test_truevalue.shape
 print(confusion_matrix(y_test_truevalue,x_test_
 predictions))
 print(classification_report(y_test_truevalue,x_test_predictions))
-```
-```     
+
+   
 # Saving the Model
 ai_brain.save('customer_classification_model.h5')
-```
-```
+
+
 # Saving the data
 with open('customer_data.pickle', 'wb') as fh:
    pickle.dump([X_train_scaled,y_train,X_test_scaled,y_test,cust_1,df_cleaned,scaler_age,enc,one_hot_enc,le], fh)
 
 ai_brain = load_model('customer_classification_model.h5')
-```
-```
+
+
 # Loading the data
 with open('customer_data.pickle', 'rb') as fh:
    [X_train_scaled,y_train,X_test_scaled,y_test,customers_1,customer_df_cleaned,scaler_age,enc,one_hot_enc,le]=pickle.load(fh)
-```  
+ 
 #Prediction for a single input
 x_single_prediction = np.argmax(ai_brain.predict(X_test_scaled[1:2,:]), axis=1)
 print(x_single_prediction)

@@ -30,6 +30,7 @@ Train the data and then predict using Tensorflow
 
 
 ## PROGRAM
+```
 
 Name: Rexlin R
 Refno: 212222220034
@@ -195,6 +196,7 @@ with open('customer_data.pickle', 'rb') as fh:
 x_single_prediction = np.argmax(ai_brain.predict(X_test_scaled[1:2,:]), axis=1)
 print(x_single_prediction)
 print(le.inverse_transform(x_single_prediction))
+```
 
 
 ## Dataset Information
